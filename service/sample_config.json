@@ -1,0 +1,7 @@
+{
+	"info_gygrometer_file": "/home/alex/.info/gygrometer/data",
+	"info_temperature_file": "/home/alex/.info/temperature/data",
+	"spool_folder": "/home/alex/.messages/spool/income",
+	"image_folder": "/home/alex/.messages/img",
+	"info_co2_file": "/home/alex/.info/co2/data"
+}

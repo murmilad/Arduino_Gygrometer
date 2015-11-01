@@ -1,0 +1,12 @@
+[Unit]
+Description=netctl sleep hook
+Before=hibernate.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop='/usr/bin/rmmod ipw2200; /usr/bin/modprobe ipw2200;'
+
+[Install]
+WantedBy=hibernate.target

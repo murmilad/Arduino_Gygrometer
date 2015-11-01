@@ -1,0 +1,17 @@
+[Unit]
+Description=Arduino sensors Service
+DefaultDependencies=no
+Conflicts=shutdown.target
+Before=hibernate.target
+After=wm.target
+Wants=wm.target
+
+[Service]
+RemainAfterExit=yes
+TimeoutStartSec=0
+PIDFile=/var/run/arduino_sensors.pid
+ExecStart=/usr/local/bin/arduino_sensors.py /home/alex/.info/config/arduino_sensors.json
+
+
+[Install]
+WantedBy=wm.target hibernate.target

@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ACTION=="add", PROGRAM="/bin/sh -c '/usr/bin/echo %N > /var/arduino_device; /usr/bin/systemctl start arduino_sensors'"
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ACTION=="remove", PROGRAM="/bin/sh -c '/usr/bin/echo none > /var/arduino_device; /usr/bin/systemctl stop arduino_sensors'"
